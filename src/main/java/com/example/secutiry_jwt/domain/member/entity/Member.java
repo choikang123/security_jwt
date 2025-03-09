@@ -20,8 +20,12 @@ public class Member {
     @Column(name = "email", nullable = false, unique = true)
     private String email;
 
+    @Column(name = "password")
+    private String password;
+
     @Builder
-    public Member(String email) {
+    public Member(String email,String password) {
         this.email = email;
+        this.password=password;
     }
 }
